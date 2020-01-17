@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="project.activity.AddPostActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_addPost"
+        style="@style/ToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layoutDirection="rtl"
+        app:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_forward_24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:text="@string/add_post"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_addPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_addPost"
+        app:layout_constraintVertical_bias="0.0">
+
+        <FrameLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_uploadPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_upload" />
+
+            <ProgressBar
+                android:id="@+id/prb_uploadPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/upload_picture"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_postText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:hintTextAppearance="@style/HintText"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_addPost">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_postText"
+            android:layout_width="match_parent"
+            android:layout_height="424dp"
+            android:gravity="top"
+            android:hint="@string/enter_description"
+            android:scrollbars="vertical"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:textDirection="rtl" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_addPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_post"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_text_size"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ProStd</string>
+    <string name="system">سامانه\u200cی استاد دانشجو</string>
+    <string name="email">ایمیل</string>
+    <string name="password">رمز عبور</string>
+    <string name="login">ورود</string>
+    <string name="register">ثبت نام</string>
+    <string name="exit_profile">خروج از حساب کاربری</string>
+    <string name="username">نام کاربری</string>
+    <string name="enter_password">رمز عبور را وارد کنید</string>
+    <string name="enter_username">نام کاربری را وارد کنید</string>
+    <string name="username_not_exsits">این نام کاربری وجود ندارد</string>
+    <string name="username_password_not_match">نام کاربری و رمز عبور مطابقت ندارند</string>
+    <string name="add_post">افزودن مطلب</string>
+    <string name="upload_picture">بارگزاری تصویر</string>
+    <string name="enter_description">توضیحات را وارد کنید</string>
+    <string name="register_post">ثبت</string>
+    <string name="please_upload_picture">لطفا ابتدا تصویر را بارگزاری کنید</string>
+    <string name="please_enter_description">لطفا توضیحات را وارد کنید</string>
+    <string name="problem_with_connection">اشکال در دریافت اطلاعات</string>
+    <string name="problem_with_upload_picture">مشکل در بارگزاری تصویر</string>
+    <string name="problem_with_add_post">مشکل در ثبت مطلب</string>
+    <string name="watch_post">مشاهده مطلب</string>
+    <string name="enter_your_comment">نظر خود را وارد کنید</string>
+    <string name="show_comments">مشاهده نظرات</string>
+    <string name="please_enter_your_comment">لطفا نظر خود را وارد کنید</string>
+    <string name="problem_with_add_comment">مشکل در ثبت نظر</string>
+    <string name="watch_comments">مشاهده نظرات</string>
+    <string name="your_comment_registered">نظر شما ثبت شد</string>
+</resources>

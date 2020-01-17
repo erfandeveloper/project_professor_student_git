@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+    <LinearLayout
+        android:id="@+id/lin_itemListPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_itemListPost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:textAlignment="gravity"
+            android:textColor="#111"
+            android:textSize="20sp"
+            android:lines="1"
+            tools:text="this is post text field" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

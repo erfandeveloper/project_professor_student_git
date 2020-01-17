@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="project.activity.ShowCommentsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_showComments"
+        style="@style/ToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layoutDirection="rtl"
+        app:elevation="5dp"
+        app:navigationIcon="@drawable/ic_arrow_forward_24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:text="@string/watch_comments"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_postComments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/edt_comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_showComments">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_list_comments"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_addComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/register_post"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_text_size"
+            app:backgroundTint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/edt_comment"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="right"
+            android:hint="@string/enter_your_comment"
+            android:inputType="text"
+            android:layoutDirection="rtl"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
